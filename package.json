@@ -1,28 +1,40 @@
 {
-  "name": "beautiful-websafe-fonts",
-  "version": "1.0.0",
-  "description": "A simple library of websafe CSS font rules to apply in your next project",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
-  },
-  "keywords": [],
-  "author": "Jack Pritchard",
-  "license": "ISC",
-  "dependencies": {},
-  "devDependencies": {
-    "@babel/core": "^7.7.2",
-    "@storybook/html": "^5.2.6",
-    "babel-loader": "^8.0.6"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/whatjackhasmade/Beautiful-Websafe-Fonts.git"
-  },
-  "bugs": {
-    "url": "https://github.com/whatjackhasmade/Beautiful-Websafe-Fonts/issues"
-  },
-  "homepage": "https://github.com/whatjackhasmade/Beautiful-Websafe-Fonts#readme"
+	"name": "beautiful-websafe-fonts",
+	"version": "1.0.0",
+	"description": "A simple library of websafe CSS font rules to apply in your next project",
+	"main": "index.js",
+	"scripts": {
+		"d": "build-storybook",
+		"dev": "build-storybook",
+		"develop": "build-storybook",
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"storybook": "start-storybook -p 6006",
+		"build-storybook": "build-storybook"
+	},
+	"keywords": [],
+	"author": "Jack Pritchard",
+	"license": "ISC",
+	"dependencies": {
+		"css-loader": "^3.2.0",
+		"node-sass": "^4.13.0",
+		"sass-loader": "^8.0.0",
+		"style-loader": "^1.0.0"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.7.2",
+		"@storybook/addon-actions": "^5.2.6",
+		"@storybook/addon-links": "^5.2.6",
+		"@storybook/addons": "^5.2.6",
+		"@storybook/react": "^5.2.6",
+		"babel-loader": "^8.0.6",
+		"storybook-readme": "^5.0.8"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/whatjackhasmade/Beautiful-Websafe-Fonts.git"
+	},
+	"bugs": {
+		"url": "https://github.com/whatjackhasmade/Beautiful-Websafe-Fonts/issues"
+	},
+	"homepage": "https://github.com/whatjackhasmade/Beautiful-Websafe-Fonts#readme"
 }

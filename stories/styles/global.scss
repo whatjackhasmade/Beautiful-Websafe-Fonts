@@ -1,0 +1,241 @@
+html {
+	box-sizing: border-box;
+
+	/* BETTER FONT SMOOTHING - https://gist.github.com/hsleonis/55712b0eafc9b25f1944 */
+	font-variant-ligatures: none;
+	-webkit-font-variant-ligatures: none;
+	text-rendering: optimizeLegibility;
+	-moz-osx-font-smoothing: grayscale;
+	font-smoothing: antialiased;
+	-webkit-font-smoothing: antialiased;
+	text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
+}
+
+::-webkit-scrollbar {
+	width: 16px;
+	background-color: #f2f4f8;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: black;
+	border: 2px solid black;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+/* Accessibly remove animations: https://gist.githubusercontent.com/bellangerq/6cdfe6e3701b4048c72546960c7c9f66/raw/dc5036697d0da57eff8e0f659106b319102e72a0/a11y-disable-animations.css */
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.001ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.001ms !important;
+	}
+}
+
+/* Fix anchor scroll positioning */
+[id]::before {
+	display: block;
+	content: "";
+	margin-top: -4rem;
+	height: 4rem;
+}
+
+body {
+	color: black;
+	scroll-behavior: smooth;
+
+	&.scroll--fixed {
+		overflow: hidden;
+	}
+}
+
+a {
+	color: rebeccapurple;
+	text-decoration: none;
+}
+
+p {
+	a {
+		&:active,
+		&:focus,
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0 0 16px;
+}
+
+h1,
+.h1 {
+	font-size: 52px;
+	font-weight: bold;
+	line-height: 68px;
+}
+
+h2,
+.h2 {
+	margin-bottom: 24px;
+
+	font-size: 42px;
+	font-weight: bold;
+	line-height: 52px;
+}
+
+h3,
+.h3 {
+	font-size: 32px;
+	font-weight: bold;
+	line-height: 48px;
+}
+
+h4,
+.h4 {
+	font-size: 28px;
+	font-weight: 500;
+	line-height: 40px;
+}
+
+h5,
+.h5 {
+	font-size: 26px;
+	font-weight: 500;
+	line-height: 36px;
+}
+
+h6,
+.h6 {
+	font-size: 22px;
+	font-weight: 500;
+	line-height: 32px;
+}
+
+/* Common base styles for the site */
+img,
+svg,
+video {
+	max-width: 100%;
+}
+
+p {
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 30px;
+
+	color: black;
+}
+
+blockquote {
+	display: block;
+	margin: 64px auto;
+	max-width: 1070px;
+	padding: 64px 64px 32px;
+	position: relative;
+
+	color: black;
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 22px;
+
+	text-align: left;
+}
+
+/* FORM */
+button[type="submit"] {
+	margin-top: 8px;
+}
+
+input[disabled] {
+	cursor: not-allowed;
+}
+
+input,
+label,
+textarea {
+	display: block;
+	width: 100%;
+}
+
+input,
+textarea {
+	padding: 16px;
+
+	background-color: white;
+	border: 1px solid rgba(0, 0, 0, 0.12);
+
+	& + & {
+		margin-top: 24px;
+	}
+}
+
+label {
+	margin: 32px 0 8px;
+
+	color: black;
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 32px;
+	text-transform: capitalize;
+}
+
+textarea {
+	min-height: 150px;
+	resize: vertical;
+	width: 100%;
+}
+
+select {
+	border-radius: 0;
+	display: block;
+	margin: 0;
+	max-width: 100%;
+	padding: 16px;
+	width: 100%;
+
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+	background-color: white;
+	border: 1px solid #ccc;
+	box-shadow: none;
+	color: black;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 292.4 164.4'%3E%3Cpath d='M287 5.4c-3.4-3.5-8.1-5.5-13-5.4H18.4c-5 0-9.3 1.8-12.9 5.4C2 8.7 0 13.4 0 18.2c0 5 1.8 9.3 5.4 12.9l128 127.9c3.6 3.6 7.8 5.4 12.8 5.4s9.2-1.8 12.8-5.4L287 31c3.5-3.5 5.4-7.8 5.4-12.8s-1.9-9.2-5.5-12.8h.1z' fill='%23787878'/%3E%3C/svg%3E"),
+		linear-gradient(to bottom, #fff 0%, #fff 100%);
+	background-repeat: no-repeat, repeat;
+	background-position: right 1.1em top 50%, 0 0;
+	background-size: 0.75em auto, 100%;
+}
+
+select::-ms-expand {
+	display: none;
+}
+
+select:focus {
+	outline: none;
+}
+
+option {
+	padding: 16px;
+
+	font-weight: normal;
+}
+
+::placeholder {
+	color: #282220;
+	font-size: 14px;
+	font-weight: 300;
+	line-height: 20px;
+}
