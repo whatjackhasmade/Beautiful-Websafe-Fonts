@@ -10,6 +10,17 @@ const Article = ({ className }) => (
 			your whole community fantastic dividends.
 		</p>
 
+		<blockquote cite="https://www.huxley.net/bnw/four.html">
+			<p>
+				We'll paint one happy little tree right here. All you need to paint is a
+				few tools, a little instruction, and a vision in your mind. Making all
+				those little fluffies that live in the clouds.
+			</p>
+			<footer>
+				—Aldous Huxley, <cite>Brave New World</cite>
+			</footer>
+		</blockquote>
+
 		<p>
 			We'll paint one happy little tree right here. All you need to paint is a
 			few tools, a little instruction, and a vision in your mind. Making all

@@ -1,0 +1,13 @@
+.arial-baskerville {
+	font-family: Arial, Helvetica, sans-serif;
+
+	blockquote,
+	q {
+		font-family: Bakserville, serif;
+		font-style: italic;
+	}
+
+	article > * {
+		line-height: 1.3;
+	}
+}

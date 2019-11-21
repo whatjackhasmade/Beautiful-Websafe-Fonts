@@ -1,0 +1,7 @@
+```
+font-family: Arial, Helvetica, sans-serif;
+
+p {
+	line-height: 1.4;
+}
+```
