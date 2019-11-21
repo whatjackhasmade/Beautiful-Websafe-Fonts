@@ -4,12 +4,13 @@
 	"description": "A simple library of websafe CSS font rules to apply in your next project",
 	"main": "index.js",
 	"scripts": {
-		"d": "build-storybook",
-		"dev": "build-storybook",
-		"develop": "build-storybook",
+		"build": "build-storybook",
+		"build-storybook": "build-storybook",
+		"d": "start-storybook -p 6006",
+		"dev": "start-storybook -p 6006",
+		"develop": "start-storybook -p 6006",
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"storybook": "start-storybook -p 6006",
-		"build-storybook": "build-storybook"
+		"storybook": "start-storybook -p 6006"
 	},
 	"keywords": [],
 	"author": "Jack Pritchard",
